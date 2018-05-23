@@ -1,0 +1,98 @@
+@import 'variables';
+
+.form-group {
+  margin-bottom: 0.2rem;
+  label {
+    font-size: $font-size-regular;
+    color: $primary-color;
+    margin-bottom: 0;
+  }
+}
+
+.form-control {
+  color: $dark-color-dark;
+  font-size: $font-size-medium;
+  height: 2.5rem;
+  &:focus {
+    box-shadow: none;
+    border-color: $neutral-color-positive;
+  }
+  &:disabled {
+    background-color: $dark-color-light;
+  }
+}
+
+.submitted {
+  .ng-invalid {
+    border-color: $error-color;
+  }
+}
+
+.form-check,
+.form-check-inline {
+  .form-check-input[type='checkbox'] {
+    appearance: none;
+    border: 2px solid $primary-color;
+    height: 15px;
+    width: 15px;
+    &:checked::after {
+      content: '';
+      border: solid $primary-color;
+      border-width: 0 2px 2px 0;
+      display: block;
+      height: 9px;
+      left: 3px;
+      position: absolute;
+      transform: rotate(45deg);
+      top: 0;
+      width: 5px;
+    }
+    &::-ms-check {
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+  }
+  .form-check-input[type='radio'] {
+    appearance: none;
+    border: 2px solid $primary-color;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    &:checked::after {
+      content: '';
+      background-color: $primary-color;
+      border-radius: 50%;
+      display: block;
+      height: 7px;
+      left: 2px;
+      position: absolute;
+      top: 2px;
+      width: 7px;
+    }
+    &::-ms-check {
+      border-color: $primary-color;
+      color: $primary-color;
+    }
+  }
+}
+
+.submitted {
+  .form-check,
+  .form-check-inline {
+    .form-check-input.ng-invalid {
+      border-color: $error-color;
+      &::-ms-check {
+        border-color: $error-color;
+      }
+    }
+  }
+}
+.form-check-inline {
+  position: relative;
+  .form-check-input[type='radio'] {
+    &:checked::after {
+      left: 4px;
+      top: 9px;
+    }
+  }
+}

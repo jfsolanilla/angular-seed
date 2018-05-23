@@ -1,0 +1,51 @@
+// FONTS
+$font-family-base: 'avenir', Helvetica, Arial, sans-serif;
+$font-weight-black: 900;
+$font-weight-heavy: 500;
+$font-weight-book: 300;
+
+$font-size-big: 1.875rem;
+$font-size-medium: 0.875rem;
+$font-size-regular: 0.75rem;
+$font-size-small: 0.625rem;
+
+// COLORS
+$primary-color-light: #284862;
+$primary-color: #1E3B55;
+$primary-color-dark: #0A2339;
+
+$secondary-color: #2D70A7;
+$secondary-color-dark: #2C5B81;
+
+$tertiary-color: #5CB94F;
+$tertiary-color-light: #60D4AF;
+$tertiary-color-dark: #3A8230;
+
+$error-color: #F74844;
+$error-color-dark: #DD6F28;
+
+$dark-color-light: #EFEFEF;
+$dark-color: #77818A;
+$dark-color-dark: #424141;
+
+// $input-border-color coming from bootstrap variables
+
+$light-color: #FFFFFF;
+$light-color-dark: #F8F8F8;
+
+$black-color: #000000;
+
+$positive-color: $tertiary-color;
+
+$neutral-color-positive: #63B2CA;
+$neutral-color: #9E508E;
+$neutral-color-negative: #F7B44F;
+
+$negative-color:$error-color;
+$negative-color-dark: $secondary-color-dark;
+
+// TEXT
+$text-color: $primary-color;
+
+// FILTERS
+$filters-background-color: $light-color-dark;

@@ -1,0 +1,52 @@
+@import 'variables';
+
+.primary-button {
+  border-radius: 2.5rem;
+  background-color: $tertiary-color;
+  color: $light-color;
+  font-size: $font-size-medium;
+  font-weight: $font-weight-black;
+  line-height: 1.2;
+  height: 2.5rem;
+  min-width: 9.375rem;
+  text-transform: uppercase;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &:hover {
+    background-color: $tertiary-color-dark;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.secondary-button {
+  @extend .primary-button;
+  background-color: $light-color;
+  border: 2px solid $primary-color;
+  color: $primary-color;
+  &:hover {
+    background-color: $primary-color;
+    color: $light-color;
+  }
+}
+
+.tertiary-button {
+  @extend .primary-button;
+  background-color: $primary-color;
+  border: 2px solid $primary-color;
+  color: $light-color;
+  &:hover {
+    background-color: $primary-color-dark;
+  }
+}
+
+.clear-button {
+  @extend .primary-button;
+  background-color: transparent;
+  color: $primary-color;
+  &:hover {
+    background-color: $light-color-dark;
+  }
+}
