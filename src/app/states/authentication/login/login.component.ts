@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {StateService} from '@uirouter/angular';
-import {User} from '../../core/model/user/user.model';
-import {USER_EMPTY} from '../../core/model/user/user.mock';
+import {User} from '../../../core/model/user/user.model';
+import {USER_EMPTY} from '../../../core/model/user/user.mock';
 
 @Component({
   selector: 'app-login',

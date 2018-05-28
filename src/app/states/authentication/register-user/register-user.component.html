@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h1 class="title">
+        Register User
+      </h1>
+    </div>
+  </div>
+</div>
+<form #registerUserForm="ngForm" (ngSubmit)="submit()" [ngClass]="{'submitted': submitted}">
+  <div class="row" ngModelGroup="user">
+    <div class="col">
+      <app-user-form></app-user-form>
+    </div>
+  </div>
+  <section class="create-button-section">
+    <div class="container-fluid">
+      <div class="row d-flex flex-grow-1 justify-content-end my-4 button-container">
+        <div class="col-12 col-md-auto">
+          <button class="btn primary-button" type="submit">Save info</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</form>

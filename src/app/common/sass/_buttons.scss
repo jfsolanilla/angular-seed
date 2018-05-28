@@ -1,11 +1,11 @@
 @import 'variables';
 
 .primary-button {
-  border-radius: 2.5rem;
-  background-color: $tertiary-color;
+  border-radius: 0.5rem;
+  background-color: $primary-color;
   color: $light-color;
   font-size: $font-size-medium;
-  font-weight: $font-weight-black;
+  font-weight: $font-weight-heavy;
   line-height: 1.2;
   height: 2.5rem;
   min-width: 9.375rem;
@@ -14,7 +14,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   &:hover {
-    background-color: $tertiary-color-dark;
+    background-color: $secondary-color-dark;
   }
   &:focus {
     box-shadow: none;
@@ -25,7 +25,7 @@
   @extend .primary-button;
   background-color: $light-color;
   border: 2px solid $primary-color;
-  color: $primary-color;
+  color: $light-color;
   &:hover {
     background-color: $primary-color;
     color: $light-color;

@@ -1,15 +1,8 @@
 @import '../../commons/sass/variables';
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
-@import '~bootstrap/scss/mixins/breakpoints';
-
-.form-check {
-  padding-top: 1rem;
-}
 
 .title {
   font-style: italic;
-  font-weight: $font-weight-black;
+  font-weight: $font-weight-heavy;
   line-height: 1.4;
   margin-bottom: 0.5rem;
   padding-top: 1rem;
@@ -21,7 +14,4 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-top: 0.93rem;
-  @include media-breakpoint-down(sm) {
-    margin-top: 0.73rem;
-  }
 }
