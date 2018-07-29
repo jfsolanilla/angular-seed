@@ -1,0 +1,30 @@
+@import 'variables';
+
+.form-group {
+  margin-bottom: 0.2rem;
+  label {
+    font-size: $font-size-regular;
+    color: $secondary-color-dark;
+    margin-bottom: 0;
+  }
+}
+
+.form-control {
+  color: $dark-color-dark;
+  font-size: $font-size-medium;
+  height: 2.5rem;
+  &:focus {
+    box-shadow: none;
+    border-color: $neutral-color-positive;
+  }
+  &:disabled {
+    background-color: $dark-color-light;
+  }
+}
+
+.submitted {
+  .ng-invalid {
+    border-color: $error-color;
+  }
+}
+

@@ -1,4 +1,5 @@
-import {state as DashboardRoute} from './dashboard/dashboard.route';
-import {state as UsersRoute} from './users/users.route';
+import {Ng2StateDeclaration} from '@uirouter/angular';
 
-export const STATES = [DashboardRoute, UsersRoute];
+import {state as LoginRoute} from './authentication/login/login.route';
+
+export const STATES: Ng2StateDeclaration[] = [LoginRoute];
