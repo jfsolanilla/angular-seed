@@ -7,17 +7,17 @@
     </div>
   </div>
 </div>
-<form #registerUserForm="ngForm" (ngSubmit)="submit()" [ngClass]="{'submitted': submitted}">
+<form (ngSubmit)="submit()" [ngClass]="{'submitted': submitted}">
   <div class="row" ngModelGroup="user">
     <div class="col">
-      <app-user-form></app-user-form>
+      <app-user-form [submitted]="submitted"></app-user-form>
     </div>
   </div>
   <div class="container-fluid">
     <div class="form-row action-buttons">
       <!--Back button-->
       <div class="col-xs-12 col-md-4 form-group">
-        <button class="btn secondary-button">Back</button>
+        <button class="btn secondary-button" (click)="cancel()">Back</button>
       </div>
       <!--Save info button-->
       <div class="col-xs-12 col-md-4 form-group">

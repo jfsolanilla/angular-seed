@@ -1,6 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {UIRouterModule} from '@uirouter/angular';
+import {ReactiveFormsModule} from '@angular/forms';
 
 import {uiRouterConfigFn} from './config/router.config';
 
@@ -20,6 +21,7 @@ import {DashboardModule} from './states/dashboard/dashboard.module';
     BrowserModule,
     CoreModule,
     CommonModule,
+    ReactiveFormsModule,
     NgbModule.forRoot(),
     UIRouterModule.forRoot({
       states: STATES,

@@ -15,3 +15,11 @@
   padding-bottom: 1rem;
   margin-top: 0.93rem;
 }
+
+.submitted {
+  .form-control {
+    &.ng-invalid{
+      border-color: red;
+    }
+  }
+}

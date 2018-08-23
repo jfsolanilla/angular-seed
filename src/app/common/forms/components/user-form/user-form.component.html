@@ -1,40 +1,40 @@
 <div class="container-fluid">
-  <div class="form-row align-items-center">
+  <form [formGroup]="profileForm" class="form-row align-items-center" [ngClass]="{'submitted': submitted}">
     <div class="col-md-4 form-group">
       <label for="first-name">
         First Name *
       </label>
-      <input class="form-control" id="first-name" ngModel name="firstName" required/>
+      <input class="form-control" type="text" id="first-name" formControlName="firstName" name="firstName"/>
     </div>
     <div class="col-md-4 form-group">
       <label for="middle-name">
         Middle Name
       </label>
-      <input class="form-control" id="middle-name" ngModel name="middleName"/>
+      <input class="form-control" type="text" id="middle-name" formControlName="middleName" name="middleName"/>
     </div>
     <div class="col-md-4 form-group">
       <label for="first-lastname">
         First Last Name *
       </label>
-      <input class="form-control" id="first-lastname" ngModel name="lastName" required/>
+      <input class="form-control" type="text" id="first-lastname" formControlName="lastName" name="lastName"/>
     </div>
     <div class="col-md-4 form-group">
       <label for="second-surname">
         Second Last Name *
       </label>
-      <input class="form-control" id="second-surname" ngModel name="secondSurname" required/>
+      <input class="form-control" type="text" id="second-surname" formControlName="secondSurname" name="secondSurname"/>
     </div>
     <div class="col-md-4 form-group">
       <label for="email">
         email *
       </label>
-      <input class="form-control" id="email" ngModel name="email" required/>
+      <input class="form-control" type="email" id="email" formControlName="email" name="email"/>
     </div>
     <div class="col-md-4 form-group">
       <label for="password">
         password *
       </label>
-      <input class="form-control" id="password" ngModel name="password" required/>
+      <input class="form-control" type="password" id="password" formControlName="password" name="password"/>
     </div>
-  </div>
+  </form>
 </div>
