@@ -3,6 +3,7 @@ import {UIRouterModule} from '@uirouter/angular';
 
 import {CommonModule} from '../../common/common.module';
 import {FormsModule} from '../../common/forms/forms.module';
+import {ReactiveFormsModule} from '@angular/forms';
 
 import {LoginComponent} from './login/login.component';
 import {RegisterUserComponent} from './register-user/register-user.component';
@@ -13,6 +14,7 @@ import {STATES as moduleStates} from './authentication.states';
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     UIRouterModule.forChild({
       states: moduleStates
     })
