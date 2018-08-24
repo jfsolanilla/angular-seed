@@ -3,6 +3,7 @@ import {UIRouterModule} from '@uirouter/angular';
 import {FormsModule as AngularFormsModule} from '@angular/forms';
 import {CommonModule as AngularCommonModule} from '@angular/common';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {SideMenuComponent} from './components/side-menu/side-menu.component';
 
 @NgModule({
   imports: [
@@ -11,11 +12,14 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     NgbModule,
     UIRouterModule.forChild()
   ],
-  declarations: [],
+  declarations: [
+    SideMenuComponent
+  ],
   exports: [
     AngularCommonModule,
     AngularFormsModule,
-    NgbModule
+    NgbModule,
+    SideMenuComponent
   ],
   providers: [],
   entryComponents: []

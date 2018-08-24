@@ -3,11 +3,13 @@ import {CommonModule} from '@angular/common';
 import {UserResource} from './resource/user/user.resource';
 import {UserService} from './service/user/user.service';
 import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   declarations: [],
   providers: [UserResource, UserService]
