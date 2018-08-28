@@ -39,11 +39,13 @@ export class RegisterUserComponent implements OnInit {
    checkUser(profileInfo) {
      const localUsers = JSON.parse(localStorage.getItem('users'));
      let registerUser = true;
-     localUsers.forEach(user => {
-       if (user.email === profileInfo.email) {
-         registerUser = false; // Same email. User won't be registered
-       }
-     });
+     if (localUsers) {
+       localUsers.forEach(user => {
+         if (user.email === profileInfo.email) {
+           registerUser = false; // Same email. User won't be registered
+         }
+       });
+     }
 
      return registerUser;
   }

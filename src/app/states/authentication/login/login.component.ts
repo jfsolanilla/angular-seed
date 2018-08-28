@@ -25,19 +25,24 @@ export class LoginComponent {
   }
 
   public getLoginInfo() {
-    return(this.loginForm.value);
+    return (this.loginForm.value);
   }
 
   checkUserLogin() {
     const userInfo = this.getLoginInfo();
     if (this.loginForm.valid && userInfo) {
       const localUsers = JSON.parse(localStorage.getItem('users'));
-      localUsers.forEach(user => {
-        if (user.email === userInfo.email &&
-          user.password === userInfo.password) {
-          this.nextState('dashboard'); // Same email. User can login
-        }
-      });
+      if (localUsers) {
+        localUsers.forEach(user => {
+          if (user.email === userInfo.email &&
+            user.password === userInfo.password) {
+            this.nextState('dashboard'); // Same email. User can login
+          }
+        });
+      }
+      else {
+        console.log('Register user first');
+      }
     }
   }
 
