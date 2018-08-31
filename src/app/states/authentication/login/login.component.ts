@@ -39,8 +39,7 @@ export class LoginComponent {
             this.nextState('dashboard'); // Same email. User can login
           }
         });
-      }
-      else {
+      } else {
         console.log('Register user first');
       }
     }

@@ -9,13 +9,22 @@ import {CategoryService} from '../../../core/service/video/category/category.ser
 })
 export class SideMenuComponent implements OnInit {
 
-  constructor(private http: HttpClient, private categoryService: CategoryService) { }
+  categories: any;
+
+  constructor(private http: HttpClient, private categoryService: CategoryService) {
+    this.categories = [];
+  }
 
   ngOnInit() {
     // Getting the list of available categories
     this.categoryService.getAll().subscribe((categories) => {
-      console.log(categories);
-      }
-    );
+      this.categories = categories.data;
+    });
+  }
+
+  getSubcategories(category) {
+    this.categoryService.getByCategory(category).subscribe((subCategories) => {
+      console.log(subCategories);
+    });
   }
 }

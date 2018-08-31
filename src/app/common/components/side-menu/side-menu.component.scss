@@ -1,90 +1,62 @@
-.wrapper {
-  display: flex;
-  width: 100%;
-  align-items: stretch;
-}
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '../../sass/variables';
 
-#sidebar {
-  min-width: 250px;
-  max-width: 250px;
-  background: #7386D5;
-  color: #fff;
-  transition: all 0.3s;
-}
-
-#sidebar.active {
-  margin-left: -250px;
-}
-
-#sidebar .sidebar-header {
-  padding: 20px;
-  background: #6d7fcc;
-}
-
-#sidebar ul.components {
-  padding: 20px 0;
-  border-bottom: 1px solid #47748b;
-}
-
-#sidebar ul p {
-  color: #fff;
-  padding: 10px;
-}
-
-#sidebar ul li a {
-  padding: 10px;
-  font-size: 1.1em;
+:host {
+  background-color: $primary-color;
   display: block;
-}
-
-#sidebar ul li a:hover {
-  color: #7386D5;
-  background: #fff;
-}
-
-#sidebar ul li.active>a,
-a[aria-expanded="true"] {
-  color: #fff;
-  background: #6d7fcc;
-}
-
-a[data-toggle="collapse"] {
+  height: 100%;
   position: relative;
+  width: 300px;
+  @include media-breakpoint-down(xs) {
+    display: none;
+  }
 }
-
-.dropdown-toggle::after {
-  display: block;
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
+.container-fixed {
+  @include media-breakpoint-down(xs) {
+    position: static;
+  }
 }
-
-ul ul a {
-  font-size: 0.9em !important;
-  padding-left: 30px !important;
-  background: #6d7fcc;
-}
-
-ul.CTAs {
-  padding: 20px;
-}
-
-ul.CTAs a {
-  text-align: center;
-  font-size: 0.9em !important;
-  display: block;
-  border-radius: 5px;
-  margin-bottom: 5px;
-}
-
-a.download {
-  background: #fff;
-  color: #7386D5;
-}
-
-a.article,
-a.article:hover {
-  background: #6d7fcc !important;
-  color: #fff !important;
+.menu-container {
+  overflow: auto;
+  background-color: $primary-color-light;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  @include media-breakpoint-down(xs) {
+    height: auto;
+  }
+  .item-menu {
+    color: $light-color;
+    list-style: none;
+    .description {
+      margin-left: 0.5rem;
+    }
+    .link {
+      align-items: center;
+      background-color: $primary-color-light;
+      color: $light-color;
+      cursor: pointer;
+      display: flex;
+      height: 3rem;
+      padding-left: 5rem;
+      position: relative;
+      @include media-breakpoint-down(xs) {
+        padding-left: 2rem;
+      }
+      &:active {
+        color: $light-color;
+      }
+      &.active, &:hover {
+        background-color: $primary-color-dark;
+        color: $light-color;
+        font-weight: $font-weight-heavy;
+        text-decoration: none;
+      }
+      &.link-active {
+        background-color: $primary-color-dark;
+      }
+    }
+  }
 }
