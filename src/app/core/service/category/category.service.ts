@@ -15,8 +15,7 @@ export class CategoryService {
   }
 
   getByCategory(category) {
-    const test = `https://api.vimeo.com/categories/${category}/videos?access_token=6cd2ed3009596ecd5774129978575c49`;
-    return this.http.get<Category>(test);
+    return this.http.get<Category>(`https://api.vimeo.com/categories/${category}/videos?access_token=6cd2ed3009596ecd5774129978575c49`);
   }
 }
 

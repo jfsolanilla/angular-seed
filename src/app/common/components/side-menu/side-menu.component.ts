@@ -7,7 +7,6 @@ import {CategoryService} from '../../../core/service/category/category.service';
   styleUrls: ['./side-menu.component.scss']
 })
 export class SideMenuComponent implements OnInit {
-
   categories: any;
 
   constructor(private categoryService: CategoryService) {

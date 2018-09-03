@@ -1,0 +1,12 @@
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  .image-container {
+    margin: 10px 10px;
+    .video-name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
