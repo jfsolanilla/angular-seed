@@ -4,7 +4,7 @@ import {FormsModule as AngularFormsModule} from '@angular/forms';
 import {CommonModule as AngularCommonModule} from '@angular/common';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {SideMenuComponent} from './components/side-menu/side-menu.component';
-import { VideoDashboardComponent } from './components/video-dashboard/video-dashboard.component';
+import {VideoDashboardComponent} from './components/video-dashboard/video-dashboard.component';
 
 @NgModule({
   imports: [
@@ -21,7 +21,8 @@ import { VideoDashboardComponent } from './components/video-dashboard/video-dash
     AngularCommonModule,
     AngularFormsModule,
     NgbModule,
-    SideMenuComponent
+    SideMenuComponent,
+    VideoDashboardComponent
   ],
   providers: [],
   entryComponents: []

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {CategoryService} from '../../../core/service/video/category/category.service';
+import {CategoryService} from '../../../core/service/category/category.service';
 
 @Component({
   selector: 'app-side-menu',
@@ -11,7 +10,7 @@ export class SideMenuComponent implements OnInit {
 
   categories: any;
 
-  constructor(private http: HttpClient, private categoryService: CategoryService) {
+  constructor(private categoryService: CategoryService) {
     this.categories = [];
   }
 
@@ -19,12 +18,6 @@ export class SideMenuComponent implements OnInit {
     // Getting the list of available categories
     this.categoryService.getAll().subscribe((categories) => {
       this.categories = categories.data;
-    });
-  }
-
-  getSubcategories(category) {
-    this.categoryService.getByCategory(category).subscribe((subCategories) => {
-      console.log(subCategories);
     });
   }
 }

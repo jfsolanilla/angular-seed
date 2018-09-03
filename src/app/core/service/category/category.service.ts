@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Category} from '../../../model/category/category.model';
+import {Category} from '../../model/category/category.model';
 
 @Injectable({
   providedIn: 'root'
@@ -15,9 +15,10 @@ export class CategoryService {
   }
 
   getByCategory(category) {
-    return this.http.get<Category>(`https://api.vimeo.com${category.uri}/videos?access_token=6cd2ed3009596ecd5774129978575c49`);
+    const test = `https://api.vimeo.com/categories/${category}/videos?access_token=6cd2ed3009596ecd5774129978575c49`;
+    return this.http.get<Category>(test);
   }
 }
 
-//Loader for category queries
-//Toastr when user exists, register at least one user, user doesn't exist
+// Loader for category queries
+// Toastr when user exists, register at least one user, user doesn't exist
