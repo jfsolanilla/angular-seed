@@ -3,6 +3,7 @@ import {User} from '../../../core/model/user/user.model';
 import {StateService, Transition} from '@uirouter/angular';
 import {USER_EMPTY} from '../../../core/model/user/user.mock';
 import {UserFormComponent} from '../../../common/forms/components/user-form/user-form.component';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'app-register-user',
@@ -16,7 +17,7 @@ export class RegisterUserComponent implements OnInit {
   currentUser: User;
 
   constructor(private stateService: StateService,
-              private transition: Transition) {
+              private transition: Transition, private toastr: ToastrService) {
     this.submitted = false;
     this.currentUser = USER_EMPTY;
   }
@@ -27,12 +28,16 @@ export class RegisterUserComponent implements OnInit {
 
   submit() {
     this.submitted = true;
-    if (this.userForm && this.userForm.isFormValid && this.checkUser(this.userForm.getProfileInfo())) {
+    const registerUser = this.checkUser(this.userForm.getProfileInfo());
+    if (this.userForm && this.userForm.isFormValid && registerUser) {
       const localUsers = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : [];
       localUsers.push(this.userForm.getProfileInfo());
       localStorage.setItem(`users`, JSON.stringify(localUsers));
       this.submitted = false;
+      this.toastr.success(`Registration was successful`);
       this.cancel();
+    } else if (!registerUser) {
+      this.toastr.error('Registration failed', 'User Registration');
     }
   }
 

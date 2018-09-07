@@ -2,6 +2,8 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {UIRouterModule} from '@uirouter/angular';
 import {ReactiveFormsModule} from '@angular/forms';
+import {ToastrModule} from 'ngx-toastr';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {uiRouterConfigFn} from './config/router.config';
 
@@ -22,7 +24,16 @@ import {DashboardModule} from './states/dashboard/dashboard.module';
     CoreModule,
     CommonModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     NgbModule.forRoot(),
+    ToastrModule.forRoot({
+      closeButton: true,
+      extendedTimeOut: 1000,
+      positionClass: 'toast-top-full-width',
+      progressBar: true,
+      timeOut: 5000,
+      toastClass: 'custom-toast'
+    }),
     UIRouterModule.forRoot({
       states: STATES,
       useHash: false,

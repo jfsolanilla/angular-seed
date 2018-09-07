@@ -5,12 +5,16 @@ import {CommonModule as AngularCommonModule} from '@angular/common';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {SideMenuComponent} from './components/side-menu/side-menu.component';
 import {VideoDashboardComponent} from './components/video-dashboard/video-dashboard.component';
+import {ToastrModule} from 'ngx-toastr';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
     AngularCommonModule,
     AngularFormsModule,
     NgbModule,
+    ToastrModule,
+    BrowserAnimationsModule,
     UIRouterModule.forChild()
   ],
   declarations: [
@@ -22,7 +26,9 @@ import {VideoDashboardComponent} from './components/video-dashboard/video-dashbo
     AngularFormsModule,
     NgbModule,
     SideMenuComponent,
-    VideoDashboardComponent
+    VideoDashboardComponent,
+    ToastrModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   entryComponents: []
