@@ -21,17 +21,17 @@ import {DashboardModule} from './states/dashboard/dashboard.module';
   ],
   imports: [
     BrowserModule,
-    CoreModule,
+     CoreModule,
     CommonModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
     NgbModule.forRoot(),
     ToastrModule.forRoot({
       closeButton: true,
-      extendedTimeOut: 1000,
+      // extendedTimeOut: 1000,
       positionClass: 'toast-top-full-width',
-      progressBar: true,
-      timeOut: 5000,
+      // progressBar: true,
+      // timeOut: 5000,
       toastClass: 'custom-toast'
     }),
     UIRouterModule.forRoot({

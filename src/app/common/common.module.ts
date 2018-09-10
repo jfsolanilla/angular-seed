@@ -19,7 +19,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
   ],
   declarations: [
     SideMenuComponent,
-    VideoDashboardComponent
+    VideoDashboardComponent,
   ],
   exports: [
     AngularCommonModule,

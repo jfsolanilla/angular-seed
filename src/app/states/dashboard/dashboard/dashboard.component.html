@@ -1,2 +1,4 @@
-<app-side-menu></app-side-menu>
-<app-video-dashboard></app-video-dashboard>
+<div class="dash-container">
+  <app-side-menu></app-side-menu>
+  <app-video-dashboard [category$]="selectedCategory$"></app-video-dashboard>
+</div>
